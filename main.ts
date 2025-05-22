@@ -1,11 +1,9 @@
 import { Hono } from "hono";
-import { serveStatic } from "hono/bun";
+import { serveStatic } from "hono/deno";
 
 const app = new Hono();
 
 app.use("*", serveStatic({ root: "./dist" }));
 
-export default {
-  port: 8000,
-  fetch: app.fetch,
-};
+// @ts-expect-error - Deno.serve used for deployment
+Deno.serve(app.fetch);
