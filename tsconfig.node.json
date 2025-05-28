@@ -22,5 +22,6 @@
     "noPropertyAccessFromIndexSignature": false,
     "exactOptionalPropertyTypes": false
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts"],
+  "exclude": ["node_modules"]
 }
