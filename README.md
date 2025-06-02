@@ -98,16 +98,18 @@ import { ArrowRight } from "lucide-react";
 
 This project uses Google Fonts with:
 
-- Inter Tight (sans-serif)
+- Inter (sans-serif)
+- Playfair Display (serif)
 
 The font is imported via Google Fonts CDN in `src/index.css` and configured in the Tailwind theme:
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 @theme inline {
-  --font-sans: "Inter Tight", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
 }
 ```
 
