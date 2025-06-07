@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "bun build src/main.tsx --outdir dist --target browser --minify --splitting",
     "lint": "eslint .",
     "preview": "vite preview"
   },
