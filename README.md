@@ -12,7 +12,7 @@ bun dev
 
 Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
 
-You can start editing the page by modifying `src/App.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `client/App.tsx`. The page auto-updates as you edit the file.
 
 ## Project Configuration
 
@@ -28,7 +28,7 @@ This project uses [Bun](https://bun.sh/) as the package manager:
 
 The project uses Tailwind CSS V4 with a theme defined in:
 
-- `src/index.css` - For CSS variables including colors in OKLCH format and custom theming
+- `client/index.css` - For CSS variables including colors in OKLCH format and custom theming
 - Tailwind V4 uses the new `@theme` directive for configuration
 
 ### ShadCN UI Components
@@ -101,7 +101,7 @@ This project uses Google Fonts with:
 - Inter (sans-serif)
 - Playfair Display (serif)
 
-The font is imported via Google Fonts CDN in `src/index.css` and configured in the Tailwind theme:
+The font is imported via Google Fonts CDN in `client/index.css` and configured in the Tailwind theme:
 
 ```css
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
@@ -115,7 +115,7 @@ The font is imported via Google Fonts CDN in `src/index.css` and configured in t
 
 To change or update fonts:
 
-1. Update the Google Fonts import in `src/index.css`
+1. Update the Google Fonts import in `client/index.css`
 2. Modify the `--font-sans` variable in the `@theme` directive
 
 ## Build and Deploy
