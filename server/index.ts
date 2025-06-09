@@ -7,12 +7,6 @@ const api = new Hono();
 // Health check endpoint
 api.get("/health", (c) => c.json({ status: "ok", timestamp: new Date().toISOString() }));
 
-// Example data endpoint
-api.get("/data", (c) => c.json({ 
-  message: "Hello from the API",
-  version: "1.0.0"
-}));
-
 // Create and export the server
 export const server = new Hono();
 
