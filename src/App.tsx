@@ -1,48 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { useState } from "react";
-
-interface User {
-  id: string;
-  name: string;
-  email: string;
-  createdAt: string;
-}
 
 export default function Home() {
-  const [apiStatus, setApiStatus] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [users, setUsers] = useState<User[]>([]);
-  const [loadingUsers, setLoadingUsers] = useState(false);
-
-  const testApi = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch("/api/health");
-      const data = await response.json();
-      setApiStatus(`API is ${data.status} - v${data.version}`);
-    } catch (error) {
-      setApiStatus("API connection failed");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const fetchUsers = async () => {
-    setLoadingUsers(true);
-    try {
-      const response = await fetch("/api/users");
-      const data = await response.json();
-      setUsers(data.users);
-    } catch (error) {
-      console.error("Failed to fetch users:", error);
-    } finally {
-      setLoadingUsers(false);
-    }
-  };
-
   return (
     <div className="flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-background via-background to-background">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary/10" />
@@ -81,60 +40,6 @@ export default function Home() {
               Learn More
             </Button>
           </a>
-        </div>
-
-        {/* API Test Section */}
-        <div className="mt-8 space-y-6 w-full max-w-md">
-          <div className="space-y-4">
-            <Button
-              onClick={testApi}
-              disabled={loading}
-              variant="secondary"
-              className="w-full"
-            >
-              {loading ? "Testing API..." : "Test API Health"}
-            </Button>
-            {apiStatus && (
-              <p
-                className={`text-sm ${
-                  apiStatus.includes("healthy")
-                    ? "text-green-600"
-                    : "text-red-600"
-                }`}
-              >
-                {apiStatus}
-              </p>
-            )}
-          </div>
-
-          {/* Fetch Users Section */}
-          <div className="space-y-4">
-            <Button
-              onClick={fetchUsers}
-              disabled={loadingUsers}
-              variant="outline"
-              className="w-full"
-            >
-              {loadingUsers ? "Loading Users..." : "Show Mock Users"}
-            </Button>
-
-            {users.length > 0 && (
-              <div className="space-y-2 text-left">
-                <h3 className="text-center font-semibold">Mock Users:</h3>
-                {users.map((user) => (
-                  <div
-                    key={user.id}
-                    className="p-3 border rounded-md bg-background/50"
-                  >
-                    <p className="font-medium">{user.name}</p>
-                    <p className="text-sm text-muted-foreground">
-                      {user.email}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
         </div>
       </main>
     </div>
