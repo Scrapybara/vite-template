@@ -36,29 +36,39 @@ The project uses Tailwind CSS V4 with a theme defined in:
 This project uses [ShadCN UI](https://ui.shadcn.com) for styled components. The components are incorporated directly into the codebase (not as dependencies), making them fully customizable. All components have been installed:
 
 - accordion
+- alert-dialog
+- alert
 - aspect-ratio
 - avatar
 - badge
+- breadcrumb
 - button
 - calendar
+- card
+- carousel
 - chart
 - checkbox
 - collapsible
+- command
+- context-menu
 - dialog
 - drawer
 - dropdown-menu
+- form
+- hover-card
+- input-otp
 - input
 - label
 - menubar
 - navigation-menu
+- pagination
 - popover
 - progress
 - radio-group
-- resizable
 - scroll-area
 - select
 - separator
-- sidebar
+- sheet
 - skeleton
 - slider
 - sonner
@@ -66,9 +76,9 @@ This project uses [ShadCN UI](https://ui.shadcn.com) for styled components. The 
 - table
 - tabs
 - textarea
+- toast
 - toggle-group
 - toggle
-- tooltip
 
 ### Icon Library
 
