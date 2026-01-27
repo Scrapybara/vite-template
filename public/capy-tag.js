@@ -1,14 +1,14 @@
 (function () {
-  // Create the built by scout tag
+  // Create the built by capy tag
   const tag = document.createElement("div");
-  tag.id = "built-by-scout";
+  tag.id = "built-by-capy";
   tag.innerHTML =
-    '<a href="https://scout.new" target="_blank" rel="noopener noreferrer">Built by Scout</a>';
+    '<a href="https://capy.ai" target="_blank" rel="noopener noreferrer">Built by Capy</a>';
 
   // Style the tag
   const style = document.createElement("style");
   style.textContent = `
-    #built-by-scout {
+    #built-by-capy {
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -33,13 +33,13 @@
       }
     }
     
-    #built-by-scout:hover {
+    #built-by-capy:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
       background: rgba(0, 0, 0, 0.9);
     }
     
-    #built-by-scout a {
+    #built-by-capy a {
       color: white;
       text-decoration: none;
       display: flex;
@@ -47,14 +47,14 @@
       gap: 6px;
     }
     
-    #built-by-scout a::before {
+    #built-by-capy a::before {
       content: '✨';
       font-size: 16px;
     }
     
     /* Mobile responsive */
     @media (max-width: 640px) {
-      #built-by-scout {
+      #built-by-capy {
         bottom: 10px;
         right: 10px;
         font-size: 12px;

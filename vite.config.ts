@@ -3,13 +3,13 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
-// Custom plugin to inject "built by scout" tag
-function injectBuiltByScoutPlugin() {
+// Custom plugin to inject "built by capy" tag
+function injectBuiltByCapyPlugin() {
   return {
-    name: 'inject-built-by-scout',
+    name: 'inject-built-by-capy',
     transformIndexHtml(html: string) {
-      // Inject the scout tag script reference
-      const scriptTag = '<script defer src="/scout-tag.js"></script>';
+      // Inject the capy tag script reference
+      const scriptTag = '<script defer src="/capy-tag.js"></script>';
       
       // Inject the script before the closing body tag
       return html.replace('</body>', scriptTag + '\n  </body>');
@@ -19,7 +19,7 @@ function injectBuiltByScoutPlugin() {
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(), injectBuiltByScoutPlugin()],
+  plugins: [react(), tailwindcss(), injectBuiltByCapyPlugin()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

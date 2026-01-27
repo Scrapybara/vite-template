@@ -16,23 +16,23 @@ export default function Home() {
           <h1 className="font-serif text-4xl font-light tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             Welcome to{" "}
             <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
-              Scout
+              Capy
             </span>
           </h1>
           <p className="mx-auto max-w-lg text-lg text-muted-foreground md:text-xl">
-            Your website is on the way. Let Scout Cook.
+            Your website is on the way. Let Capy Cook.
           </p>
         </div>
 
         <div className="flex flex-col gap-4 sm:flex-row">
-          <a href="https://scout.new" target="_blank" rel="noopener noreferrer">
+          <a href="https://capy.ai" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="group">
               <span>Get Started</span>
               <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
             </Button>
           </a>
           <a
-            href="https://x.com/scoutdotnew"
+            href="https://x.com/capydotai"
             target="_blank"
             rel="noopener noreferrer"
           >
